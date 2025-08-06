@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.6 on win32)" generated="2025-08-06T14:51:01.939373" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\fayse\Documents\Automation\tests">
+<suite id="s1-s1" name="Login" source="C:\Users\fayse\Documents\Automation\tests\login">
+<suite id="s1-s1-s1" name="Login Tests" source="C:\Users\fayse\Documents\Automation\tests\login\login_tests.robot">
+<kw name="Open Browser To Home Page" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:02.171548" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:02.171548" elapsed="1.873471"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-06T14:51:04.046027" elapsed="0.025297"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-06T14:51:04.071324" elapsed="0.001004"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:02.169548" elapsed="1.902780"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Successful User Login" line="9">
+<kw name="Open Browser To Login Page" owner="common_keywords">
+<kw name="Open Browser To Home Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:04.074395" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:04.074395" elapsed="1.327795"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-06T14:51:05.402190" elapsed="0.547747"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-06T14:51:05.950937" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:04.074395" elapsed="1.877542"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:05.951937" level="INFO">Clicking link 'id:login2'.</msg>
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:05.951937" elapsed="0.099179"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:06.051116" elapsed="0.260971"/>
+</kw>
+<doc>Navigates to the home page and opens the login modal.</doc>
+<status status="PASS" start="2025-08-06T14:51:04.073396" elapsed="2.238691"/>
+</kw>
+<kw name="Input Username" owner="common_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:06.313239" level="INFO">Typing text 'Faysel' into text field 'id:loginusername'.</msg>
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:06.312087" elapsed="0.130536"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<status status="PASS" start="2025-08-06T14:51:06.312087" elapsed="0.130536"/>
+</kw>
+<kw name="Input Password" owner="common_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:06.444623" level="INFO">Typing text 'TestWorking' into text field 'id:loginpassword'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:06.443623" elapsed="0.133049"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-08-06T14:51:06.443623" elapsed="0.133387"/>
+</kw>
+<kw name="Click Login Button" owner="common_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:06.577010" level="INFO">Clicking button 'css:button[onclick='logIn()']'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:06.577010" elapsed="0.083079"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:06.577010" elapsed="0.083079"/>
+</kw>
+<kw name="Verify User Is Logged In" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WELCOME_USER_LABEL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:06.662306" elapsed="1.087674"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:07.765982" level="INFO">Element 'id:nameofuser' contains text 'Welcome Faysel'.</msg>
+<arg>${WELCOME_USER_LABEL}</arg>
+<arg>Welcome ${VALID_USERNAME}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-08-06T14:51:07.749980" elapsed="0.016002"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:06.660089" elapsed="1.105893"/>
+</kw>
+<kw name="Take Visual Snapshot" owner="common_keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:07.902841" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Logged_In_Homepage.png"&gt;&lt;img src="Logged_In_Homepage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-08-06T14:51:07.765982" elapsed="0.136859"/>
+</kw>
+<arg>Logged_In_Homepage</arg>
+<status status="PASS" start="2025-08-06T14:51:07.765982" elapsed="0.137860"/>
+</kw>
+<doc>Verifies that a user can successfully log in with valid credentials.</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-08-06T14:51:04.072328" elapsed="3.831514"/>
+</test>
+<test id="s1-s1-s1-t2" name="Invalid User Login" line="19">
+<kw name="Open Browser To Login Page" owner="common_keywords">
+<kw name="Open Browser To Home Page" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:07.905348" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:07.904843" elapsed="1.891308"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-06T14:51:09.796151" elapsed="0.036384"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-06T14:51:09.832535" elapsed="0.002003"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:07.904843" elapsed="1.929695"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:09.834538" level="INFO">Clicking link 'id:login2'.</msg>
+<arg>${LOG_IN_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:09.834538" elapsed="0.084925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:09.919463" elapsed="0.260853"/>
+</kw>
+<doc>Navigates to the home page and opens the login modal.</doc>
+<status status="PASS" start="2025-08-06T14:51:07.903842" elapsed="2.276934"/>
+</kw>
+<kw name="Input Username" owner="common_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:10.180776" level="INFO">Typing text 'wronguser' into text field 'id:loginusername'.</msg>
+<arg>${LOGIN_USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:10.180776" elapsed="0.105883"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<status status="PASS" start="2025-08-06T14:51:10.180776" elapsed="0.105883"/>
+</kw>
+<kw name="Input Password" owner="common_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:10.288659" level="INFO">Typing text 'wrongpass' into text field 'id:loginpassword'.</msg>
+<arg>${LOGIN_PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:10.288659" elapsed="0.146433"/>
+</kw>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2025-08-06T14:51:10.288659" elapsed="0.146433"/>
+</kw>
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:10.437092" elapsed="0.016401"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:10.453493" level="INFO">Clicking element 'css:button[onclick='logIn()']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:10.453493" elapsed="0.062517"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2025-08-06T14:51:10.435092" elapsed="0.080918"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:10.516010" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Wrong password.</arg>
+<arg>action=ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-08-06T14:51:10.516010" elapsed="0.506760"/>
+</kw>
+<doc>Tests the login functionality with invalid credentials to ensure it fails as expected.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-08-06T14:51:07.903842" elapsed="3.119933"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-06T14:51:11.024777" elapsed="2.139206"/>
+</kw>
+<doc>Suite to test product browsing and cart functionality on DemoBlaze.</doc>
+<status status="PASS" start="2025-08-06T14:51:01.965376" elapsed="11.198607"/>
+</suite>
+<status status="PASS" start="2025-08-06T14:51:01.963377" elapsed="11.200606"/>
+</suite>
+<suite id="s1-s2" name="Products" source="C:\Users\fayse\Documents\Automation\tests\products">
+<suite id="s1-s2-s1" name="product Browse tests" source="C:\Users\fayse\Documents\Automation\tests\products\product_Browse_tests.robot">
+<kw name="Open Browser To Home Page" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:13.173984" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:13.173984" elapsed="1.890403"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.064387" elapsed="0.056494"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.120881" elapsed="0.002287"/>
+</kw>
+<status status="PASS" start="2025-08-06T14:51:13.173984" elapsed="1.949184"/>
+</kw>
+<test id="s1-s2-s1-t1" name="Browse Products By Category" line="9">
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.124214" elapsed="0.029086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:15.153300" level="INFO">Clicking element 'xpath://a[contains(.,'Phones')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.153300" elapsed="0.253981"/>
+</kw>
+<arg>${PHONES_CATEGORY_LINK}</arg>
+<arg>15s</arg>
+<status status="PASS" start="2025-08-06T14:51:15.124214" elapsed="0.283067"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:.card-block</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.407281" elapsed="0.207723"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:15.632131" level="INFO">Current page contains text 'Samsung galaxy s6'.</msg>
+<arg>Samsung galaxy s6</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.615004" elapsed="0.017127"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:15.632131" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.632131" elapsed="0.240438"/>
+</kw>
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.873941" elapsed="0.034186"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:15.909129" level="INFO">Clicking element 'xpath://a[contains(.,'Laptops')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.908127" elapsed="0.063367"/>
+</kw>
+<arg>${LAPTOPS_CATEGORY_LINK}</arg>
+<arg>15s</arg>
+<status status="PASS" start="2025-08-06T14:51:15.873594" elapsed="0.098900"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css:.card-block</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-06T14:51:15.972494" elapsed="0.084579"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:16.082586" level="INFO">Current page contains text 'Sony vaio i5'.</msg>
+<arg>Sony vaio i5</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.057073" elapsed="0.025513"/>
+</kw>
+<doc>Verifies product category navigation</doc>
+<status status="PASS" start="2025-08-06T14:51:15.123168" elapsed="0.960445"/>
+</test>
+<test id="s1-s2-s1-t2" name="View Product Details And Add To Cart" line="20">
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.084613" elapsed="0.026116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:16.111228" level="INFO">Clicking element 'xpath://a[contains(.,'Phones')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.110729" elapsed="0.097552"/>
+</kw>
+<arg>${PHONES_CATEGORY_LINK}</arg>
+<status status="PASS" start="2025-08-06T14:51:16.084613" elapsed="0.123668"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FIRST_PRODUCT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.209281" elapsed="0.010418"/>
+</kw>
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.221731" elapsed="0.012512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:16.236244" level="INFO">Clicking element 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.236244" elapsed="0.483803"/>
+</kw>
+<arg>${FIRST_PRODUCT}</arg>
+<status status="PASS" start="2025-08-06T14:51:16.219699" elapsed="0.500348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_TITLE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:16.720047" elapsed="0.337916"/>
+</kw>
+<kw name="Wait For Element And Click" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:17.057963" elapsed="0.016079"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:17.076039" level="INFO">Clicking element 'xpath://a[contains(.,'Add to cart')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:17.074042" elapsed="0.066754"/>
+</kw>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<status status="PASS" start="2025-08-06T14:51:17.057963" elapsed="0.083241"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:17.141718" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Product added</arg>
+<arg>action=ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-08-06T14:51:17.141204" elapsed="0.507062"/>
+</kw>
+<doc>Tests product details and cart addition</doc>
+<status status="PASS" start="2025-08-06T14:51:16.083613" elapsed="1.565660"/>
+</test>
+<test id="s1-s2-s1-t3" name="Navigate Back From Product Page" line="29">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:17.650656" level="INFO">Opening url 'https://www.demoblaze.com//index.html#/category/phones'</msg>
+<arg>${BASE_URL}/index.html#/category/phones</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-08-06T14:51:17.649615" elapsed="0.740414"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${FIRST_PRODUCT}</arg>
+<arg>timeout=15</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-06T14:51:18.390029" elapsed="0.375811"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:18.765840" level="INFO">Clicking element 'xpath:(//a[@class="hrefch"])[1]'.</msg>
+<arg>${FIRST_PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-06T14:51:18.765840" elapsed="0.488006"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PRODUCT_TITLE}</arg>
+<arg>timeout=15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-06T14:51:19.253846" elapsed="0.205679"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-08-06T14:51:19.459525" level="INFO">Executing JavaScript:
+window.history.back()
+Without any arguments.</msg>
+<arg>window.history.back()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-08-06T14:51:19.459525" elapsed="0.020265"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Phones</arg>
+<arg>timeout=15</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-08-06T14:51:19.481000" elapsed="0.015381"/>
+</kw>
+<doc>Tests back navigation</doc>
+<status status="PASS" start="2025-08-06T14:51:17.649615" elapsed="1.846766"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-08-06T14:51:19.497381" elapsed="2.104432"/>
+</kw>
+<doc>Suite to test user authentication on DemoBlaze.</doc>
+<status status="PASS" start="2025-08-06T14:51:13.165983" elapsed="8.435830"/>
+</suite>
+<status status="PASS" start="2025-08-06T14:51:13.163983" elapsed="8.437830"/>
+</suite>
+<status status="PASS" start="2025-08-06T14:51:01.939373" elapsed="19.664445"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="5" fail="0" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="2" fail="0" skip="0">Tests.Login</stat>
+<stat name="Login Tests" id="s1-s1-s1" pass="2" fail="0" skip="0">Tests.Login.Login Tests</stat>
+<stat name="Products" id="s1-s2" pass="3" fail="0" skip="0">Tests.Products</stat>
+<stat name="product Browse tests" id="s1-s2-s1" pass="3" fail="0" skip="0">Tests.Products.product Browse tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-08-06T14:51:01.969623" level="WARN">Error in file 'C:\Users\fayse\Documents\Automation\resources\common_keywords.robot' on line 73: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
